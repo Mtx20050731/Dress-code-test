@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noEmit": false,
+    "incremental": false,
+    "outDir": "./work/eval-dist",
+    "rootDir": "."
+  },
+  "include": [
+    "src/evals/image-analysis/**/*.ts",
+    "src/contracts/**/*.ts",
+    "src/services/ai/**/*.ts",
+    "src/features/image-analysis/**/*.ts",
+    "src/types/style.ts"
+  ],
+  "exclude": ["node_modules", ".next"]
+}

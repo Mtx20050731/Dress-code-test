@@ -1,0 +1,39 @@
+{
+  "name": "aesthetic-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "tsc -p tsconfig.test.json && node --test work/test-dist/tests/mock-engine.test.js work/test-dist/tests/journey-e2e.test.js work/test-dist/tests/real-data-contract.test.js work/test-dist/tests/image-analysis-contract.test.js work/test-dist/tests/openai-image-analysis-provider.test.js work/test-dist/tests/qwen-image-analysis-provider.test.js work/test-dist/tests/image-analysis-eval.test.js",
+    "test:browser": "node tests/browser/run-e2e.mjs",
+    "test:visual:update": "node tests/browser/run-e2e.mjs --update",
+    "deploy:check": "node scripts/check-deployment.mjs",
+    "image-analysis:configure": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-image-analysis.ps1",
+    "image-analysis:configure:qwen": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/configure-qwen-image-analysis.ps1",
+    "eval:validate-annotations": "tsc -p tsconfig.eval.json && node work/eval-dist/src/evals/image-analysis/validate-annotations.js",
+    "eval:image-analysis": "tsc -p tsconfig.eval.json && node work/eval-dist/src/evals/image-analysis/run-eval.js --provider=qwen",
+    "eval:image-analysis:report": "tsc -p tsconfig.eval.json && node work/eval-dist/src/evals/image-analysis/generate-report.js",
+    "eval:image-analysis:mock": "tsc -p tsconfig.eval.json && node work/eval-dist/src/evals/image-analysis/run-eval.js --provider=mock",
+    "eval:image-analysis:openai": "tsc -p tsconfig.eval.json && node work/eval-dist/src/evals/image-analysis/run-eval.js --provider=openai",
+    "eval:image-analysis:qwen": "tsc -p tsconfig.eval.json && node work/eval-dist/src/evals/image-analysis/run-eval.js --provider=qwen"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

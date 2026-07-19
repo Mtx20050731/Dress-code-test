@@ -58,4 +58,3 @@ npm run eval:validate-annotations
 npm run eval:image-analysis
 npm run eval:image-analysis:report
 ```
-

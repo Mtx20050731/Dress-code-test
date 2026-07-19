@@ -1,0 +1,126 @@
+/* Loaded separately so the result edition keeps a reliable cascade after the shared test UI. */
+
+/* Dark Style Lab card: all labels and controls must keep readable contrast. */
+.lab-variant-grid article:nth-child(3) .lab-photo > span,
+.lab-variant-grid article:nth-child(3) .lab-photo > small {
+  color: #111;
+  background: #fff;
+}
+
+.lab-variant-grid article:nth-child(3) .lab-variant-copy dt { color: #aaa; }
+.lab-variant-grid article:nth-child(3) .lab-variant-copy dl,
+.lab-variant-grid article:nth-child(3) .lab-variant-copy dl > div { border-color: #555; }
+.wear-decision button { color: #111; }
+
+/* Result edition: fewer boxes, larger typographic moves, more breathing room. */
+.style-system-page {
+  --editorial-serif: var(--display);
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+.style-system-page .inner-page { width: min(100% - 64px, 1280px); }
+.style-system-page h1,
+.style-system-page h2,
+.style-system-page h3 { font-family: var(--display); font-weight: 850; }
+.style-system-page p { letter-spacing: 0; word-spacing: 0; }
+.system-editorial-cover { padding-top: 44px; padding-bottom: 132px; }
+.system-cover-grid { min-height: 650px; gap: 90px; }
+.system-cover-title h1 {
+  max-width: 980px;
+  font-size: clamp(66px, 7.4vw, 108px);
+  font-weight: 900;
+  line-height: .98;
+  letter-spacing: -.018em;
+}
+.system-cover-title h1 span { font-weight: 900; letter-spacing: -.018em; }
+.system-cover-note { max-width: 360px; padding: 30px; border-width: 1px; box-shadow: 14px 14px 0 var(--acid); }
+.system-cover-note strong { margin-top: 110px; font-family: var(--display); font-size: 34px; font-weight: 850; line-height: 1.05; letter-spacing: -.045em; }
+.system-cover-note p { letter-spacing: 0; }
+.system-cover-footer { margin-top: 72px; }
+.system-cover-footer > p { font-family: var(--sans); font-size: 16px; line-height: 1.75; letter-spacing: 0; }
+
+.system-at-a-glance { padding: 150px 0 170px; }
+.system-section-label { margin-bottom: 72px; }
+.system-section-label h2 { font-weight: 850; letter-spacing: -.055em; }
+.system-glance-grid { gap: 0; border-top: 1px solid #111; }
+.system-glance-grid article {
+  min-height: 390px;
+  padding: 30px 28px;
+  border: 0;
+  border-right: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+.system-glance-grid article:last-child { border-right: 0; }
+.system-glance-grid h3 { max-width: 340px; font-size: 36px; font-weight: 850; letter-spacing: -.045em; }
+.system-glance-grid .glance-primary { position: relative; background: #fff; }
+.system-glance-grid .glance-primary::before { position: absolute; top: 30px; right: 28px; width: 24px; height: 24px; border-radius: 50%; background: var(--acid); content: ""; }
+.system-glance-grid .glance-primary h3 { font-size: clamp(48px, 4.4vw, 66px); }
+
+.taste-story { grid-template-columns: minmax(230px, .42fr) minmax(0, 1.58fr); gap: 90px; padding: 160px 0; }
+.taste-story-heading h2 { font-size: clamp(48px, 4.8vw, 70px); font-weight: 850; letter-spacing: -.055em; }
+.taste-story-list { gap: 58px; }
+.taste-story-list > article,
+.taste-story-list > article.featured {
+  min-height: 360px;
+  padding: 28px 0 46px;
+  border: 0;
+  border-top: 1px solid #111;
+  background: #fff;
+}
+.taste-story-list > article.featured { min-height: 480px; }
+.taste-story-list .statement-copy h3 { max-width: 760px; font-size: clamp(42px, 4.4vw, 64px); font-weight: 850; letter-spacing: -.052em; }
+.taste-story-list .statement-copy > p { max-width: 610px; font-size: 13px; line-height: 1.9; }
+.taste-story-list .statement-correction-controls { max-width: 610px; }
+.statement-evidence-disclosure { max-width: 610px; margin-top: 36px; }
+
+.more-statements { border-top: 1px solid #111; }
+.more-statements > summary { padding: 22px 0; font-size: 10px; font-weight: 800; letter-spacing: .08em; cursor: pointer; }
+.more-statements > div { display: grid; gap: 58px; padding-top: 40px; }
+
+.system-tension-feature { gap: 100px; padding: 160px 0; background: linear-gradient(90deg, transparent 0 24%, #f4f4ef 24% 100%); }
+.system-tension-feature article { padding: 42px 0 70px; }
+.system-tension-feature h2,
+.system-open-questions h2 { font-weight: 850; letter-spacing: -.055em; }
+.system-tension-feature article h3 { margin-top: 48px; font-size: 42px; font-weight: 850; letter-spacing: -.045em; }
+.system-tension-feature article p { max-width: 600px; font-size: 13px; line-height: 1.9; }
+.section-overflow-note { max-width: 620px; margin: 22px 0 0; color: var(--muted); font-size: 10px; line-height: 1.75; }
+
+.system-open-questions { gap: 100px; padding: 150px 0; }
+.system-open-questions ol { max-width: 690px; }
+.system-open-questions li { padding: 30px 0 42px; }
+.system-open-questions li strong { font-family: var(--display); font-size: 25px; font-weight: 800; line-height: 1.35; letter-spacing: -.025em; }
+.system-open-questions li p { max-width: 520px; margin-top: 14px; font-size: 11px; line-height: 1.8; }
+.system-open-questions li.section-overflow-note { max-width: none; margin: 0; color: inherit; }
+.system-open-questions li.section-overflow-note > span { color: #111; background: var(--acid); }
+
+.system-trend-stories { padding: 150px 0; }
+.trend-story-grid { gap: 24px; }
+.trend-story-grid article { min-height: 500px; padding: 30px; }
+.trend-story-grid h3,
+.system-practical-guide h3,
+.style-system-page .continuous-loop h2 { font-family: var(--display); font-weight: 850; letter-spacing: -.045em; }
+.system-practical-guide { padding: 140px 0; }
+.style-system-page .continuous-loop { padding: 160px 0; }
+
+@media (max-width: 980px) {
+  .system-cover-grid { gap: 50px; min-height: 560px; }
+  .system-cover-note strong { margin-top: 60px; }
+  .taste-story { gap: 45px; }
+  .system-tension-feature, .system-open-questions { gap: 50px; }
+}
+
+@media (max-width: 720px) {
+  .style-system-page .inner-page { width: min(100% - 32px, 1280px); }
+  .system-editorial-cover { padding-top: 28px; padding-bottom: 90px; }
+  .system-cover-grid { min-height: auto; padding-top: 70px; }
+  .system-cover-title h1 { font-size: 52px; line-height: 1.02; letter-spacing: -.012em; }
+  .system-cover-note strong { margin-top: 46px; }
+  .system-at-a-glance, .taste-story, .system-tension-feature, .system-open-questions, .system-trend-stories, .system-practical-guide, .style-system-page .continuous-loop { padding-top: 95px; padding-bottom: 95px; }
+  .system-glance-grid article { min-height: 310px; border-right: 0; }
+  .taste-story { gap: 55px; }
+  .taste-story-list { gap: 32px; }
+  .taste-story-list > article, .taste-story-list > article.featured { min-height: 340px; padding-bottom: 36px; }
+  .taste-story-list .statement-copy h3 { font-size: 39px; }
+  .system-tension-feature { padding-inline: 18px; }
+  .system-open-questions li strong { font-size: 21px; }
+}

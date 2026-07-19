@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noEmit": false,
+    "incremental": false,
+    "outDir": "./work/test-dist",
+    "rootDir": "."
+  },
+  "include": [
+    "tests/**/*.ts",
+    "src/contracts/**/*.ts",
+    "src/services/integration/**/*.ts",
+    "src/types/style.ts",
+    "src/data/style-exploration-mock.ts",
+    "src/features/exploration/mock-engine.ts",
+    "src/features/session/session-storage.ts"
+    ,"src/features/session/flow-state.ts"
+  ],
+  "exclude": ["node_modules", ".next"]
+}
